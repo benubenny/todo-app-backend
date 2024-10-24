@@ -305,7 +305,7 @@ app.post('/api/todos', auth, async (req, res) => {
         const { text } = req.body;
         
         // Enhanced shareable link with unique identifier
-        const shareableLink = `https://todo-app.vercel.app/todo/${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+        const shareableLink = `https://todo-app-bga2.vercel.app/todo/${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
         
         // Input validation
         if (!text || text.trim().length === 0) {
@@ -313,7 +313,7 @@ app.post('/api/todos', auth, async (req, res) => {
         }
 
         const todo = new Todo({
-            text: text.trim(),
+            text,
             user: req.user.userId,
             shareableLink
         });
