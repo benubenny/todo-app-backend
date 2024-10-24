@@ -31,7 +31,7 @@ const JWT_OPTIONS = {
 // Middleware
 // Update this part in your server.js
 app.use(cors({
-    origin: ['https://todo-app-bga2-8pn8f2xfb-benarjis-projects-ad8acce7.vercel.app', 'http://localhost:3000'],
+    origin: 'https://todo-app-bga2.vercel.app',
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
