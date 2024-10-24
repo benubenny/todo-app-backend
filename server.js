@@ -29,13 +29,13 @@ const JWT_OPTIONS = {
 };
 
 // Middleware
+// Update this part in your server.js
 app.use(cors({
-    origin: ['http://localhost:3000', process.env.CORS_ORIGIN],
+    origin: ['https://todo-app-bga2-8pn8f2xfb-benarjis-projects-ad8acce7.vercel.app', 'http://localhost:3000'],
     credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
-
 
 
 app.use(express.json({ limit: '10kb' }));
